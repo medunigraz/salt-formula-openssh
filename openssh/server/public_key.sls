@@ -36,7 +36,7 @@
   - user: {{ user.user.name }}
   - names:
     {%- for public_key in user.public_keys %}
-    - {{ public_key.key }}
+    - {{ public_key }}
     {%- endfor %}
   - require:
     - file: {{ user.user.name }}_ssh_dir
